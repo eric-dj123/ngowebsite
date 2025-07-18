@@ -1,0 +1,97 @@
+/*
+Template Name: Social Ngo
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+
+/*********************donation****************/
+#donation {
+background-image: url(../img/28.jpg);
+background-position: center;
+}
+.donation_1l ::placeholder {
+color: #333;
+opacity: 1; /* Firefox */
+}
+.tags_blog a {
+display: inline-block;
+padding: 6px 14px;
+margin: 0px 1px 2px 0px;
+background: #E3111A;
+color: #fff;
+font-size: 14px;
+text-transform: capitalize;
+text-align: center;
+transition: 0.3s;
+}
+.tags_blog a:hover {
+background:#053360;
+color:#fff;
+}
+
+.center_donate {
+background-image: url(../img/1.jpg);
+background-position: center;
+}
+.donation_1l .btn{
+font-size: 1.75rem!important; 
+ }
+
+/*********************donation_end****************/
+
+
+@media screen and (max-width : 767px){
+.donation_1l .form-control{
+padding-left:5px!important;
+padding-right:5px!important;
+font-size:30px;
+ }
+.donation_1r {
+text-align:center!important; 
+ }
+.donation_1r br{
+display:none;
+ }
+.donation_1r h1{
+font-size:40px;
+ }
+ }
+
+
+@media (min-width:576px) and (max-width:767px) {
+
+.donation_1l .form-control{
+padding-left:15px!important;
+padding-right:15px!important;
+font-size:50px;
+ }
+.donation_1r h1{
+font-size:50px;
+ }
+ }
+ 
+@media (min-width:768px) and (max-width:991px) {
+.donation_1l .form-control{
+padding-left:5px!important;
+padding-right:5px!important;
+font-size:30px;
+ }
+
+.donation_1r h1{
+font-size:40px;
+ }
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+.donation_1l .form-control{
+font-size:40px;
+ }
+ }
+@media (min-width:1201px) and (max-width:1310px) {
+
+ }
+
+
+

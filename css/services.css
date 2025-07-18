@@ -1,0 +1,86 @@
+/*
+Template Name: Social Ngo
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+
+/*********************services****************/
+.serv_m{
+padding-top:100px;
+padding-bottom:100px; 
+ }
+#serv {
+background-image: url(../img/33.jpg);
+}
+.serv_o2lil h1{
+font-size:100px;
+line-height:0.8em; 
+ }
+.center_serv {
+background-image: url(../img/28.jpg);
+background-position: center;
+}
+
+/*********************services_end****************/
+
+
+@media screen and (max-width : 767px){
+.serv_1l{
+text-align:center; 
+ }
+.serv_1l p{
+text-align:left; 
+ }
+.serv_o1lil{
+text-align:center;
+margin-top:5px;
+margin-bottom:5px;
+}
+.serv_o1l{
+text-align:center; 
+ }
+.serv_o1l p{
+text-align:left; 
+ }
+.serv_o1rim{
+margin-top:15px; 
+ }
+.serv_o2l {
+margin-top:8px;
+margin-bottom:8px;
+text-align:center;
+ }
+.serv_o2l p{
+text-align:left;
+ }
+.serv_o2lir{
+margin-top:15px;  
+ }
+ }
+
+
+@media (min-width:576px) and (max-width:767px) {
+
+
+ }
+ 
+@media (min-width:768px) and (max-width:991px) {
+.serv_o2lil h1 {
+font-size: 60px;
+line-height: 1.6em;
+}
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+.serv_o2lil h1 {
+font-size: 90px;
+}
+ }
+@media (min-width:1201px) and (max-width:1310px) {
+
+ }
+
+
+

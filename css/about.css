@@ -1,0 +1,188 @@
+/*
+Template Name: Social Ngo
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+
+/*********************about****************/
+.center_about {
+background-image: url(../img/1.jpg);
+background-position: center;
+}
+.testim_1i img{
+width:100px;
+height:100px; 
+ }
+.team_dt3l .progress-bar {
+background: #fafafa;
+border-radius: 5px;
+}
+.team_dt3l .progress {
+background-color: #E3111A;
+height: 6px;
+overflow: hidden;
+border-radius: 5px;
+}
+
+.login_1 {
+box-shadow: 0px 0px 8px 1px rgb(0 0 0 / 3%); 
+width:40%;
+}
+.border_line{
+border-left:3px solid  #E3111A;
+ }
+.about_n1l2{
+width:240px;
+height:240px;
+top:80px;
+right:20px; 
+ }
+.center_team {
+background-image: url(../img/28.jpg);
+background-position: center;
+}
+.center_teamdt {
+background-image: url(../img/1.jpg);
+background-position: center;
+}
+.center_faq {
+background-image: url(../img/2.jpg);
+background-position: center;
+}
+.center_reg {
+background-image: url(../img/2.jpg);
+background-position: center;
+}
+.center_log {
+background-image: url(../img/3.jpg);
+background-position: center;
+}
+/*********************about_end****************/
+
+
+@media screen and (max-width : 767px){
+.about_pg1r{
+margin-top:15px;
+text-align:center;
+ }
+.about_pg1r p{
+text-align:left;
+ }
+.about_pg1r br{
+display:none;
+ }
+.event_1l{
+text-align:center;
+margin-bottom:15px; 
+ }
+.course_1l h3{
+text-align:center; 
+ }
+.course_1r{
+text-align:center!important;
+margin-top:15px; 
+ }
+.event_1rir{
+margin-top:15px;
+text-align:center; 
+ }
+.event_1rir p{
+text-align:left; 
+ }
+.testim_1i  p{
+text-align:left; 
+ }
+.testim_1i  br{
+display:none;
+ }
+.team_dt1r{
+margin-top:15px;
+text-align:center; 
+ }
+.team_dt1r p{
+text-align:left; 
+ }
+.team_dt1r h5{
+text-align:left;
+font-size:14px; 
+ }
+.team_dt2  h2{
+text-align:center; 
+ }
+.team_dt3l h2{
+text-align:center;  
+ }
+.team_dt3l {
+margin-bottom:15px; 
+ }
+.login_1 {
+width: 100%;
+}
+.login_1 h3{
+text-align:center;
+}
+.about_n1l2 {
+position:static!important;
+width:100%; 
+ }
+.about_n1l1 img{
+width:100%;  
+ }
+.about_n1r{
+margin-top:15px; 
+ }
+.about_n1ril{
+margin-top:10px;
+margin-bottom:10px; 
+ }
+ }
+
+
+@media (min-width:576px) and (max-width:767px) {
+
+ }
+ 
+@media (min-width:768px) and (max-width:991px) {
+.about_pg1r br{
+display:none;
+ }
+.course_1r .button_1{
+padding-left:10px;
+padding-right:10px;
+font-size:13px;
+ }
+.event_1rir h5{
+font-size:16px; 
+ }
+.team_dt1r h5{
+font-size:16px; 
+ }
+.login_1 {
+width: 60%;
+}
+.about_n1l2 {
+position:static!important;
+width:100%; 
+ }
+.about_n1l1 img{
+width:100%;  
+ }
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+.course_1r .button_1{
+padding-left:20px;
+padding-right:20px;
+ }
+.login_1 {
+width: 50%;
+}
+ }
+@media (min-width:1201px) and (max-width:1310px) {
+
+ }
+
+
+
