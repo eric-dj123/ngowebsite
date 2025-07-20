@@ -15,25 +15,16 @@ include 'includes/head.php'
 include 'includes/header.php'
 ?>
 
-
 <section id="center" class="center_about">
-  <div class="center_om bg_backn1" style="background-image: url('img/2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 100px 0;">
-    <div class="container-xl">
-      <div class="row center_o1 text-center">
-        <div class="col-md-12">
-          <h1 class="text-uppercase fw-bold" style="color:black; font-size: 4rem;">About Us</h1>
-<h6 class="mb-0 mt-3 fw-bold">
-  <a href="#" style="color: #0f0c01ff; text-decoration: none; font-weight: bold;">Home</a> 
-  <span class="mx-2 text-white-50">/</span> 
-  <span style="color: #01080fff; font-weight: bold;">About Us</span>
-</h6>
-
-        </div>
-      </div>
+  <div class="center_om" style="background-color: #0c2340; padding: 100px 0;">
+    <div class="container-xl text-center text-white">
+      <h1 class="fw-bold text-uppercase">Our About Us</h1>
+      <h6 class="fw-bold">
+        <a href="index.php" class="text-white">Home</a> <span class="mx-2">/</span> Our About Us
+      </h6>
     </div>
   </div>
 </section>
-
 
 
 <!-- Mission, Vision, and Values Section -->

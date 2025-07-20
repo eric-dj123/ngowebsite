@@ -4,16 +4,12 @@
 <?php include 'includes/head.php'; ?>
 <body>
 <?php include 'includes/header.php'; ?>
-
-<!-- Hero Section -->
 <section id="center" class="center_about">
-  <div class="center_om" style="background-image: url('img/2.jpg'); background-size: cover; background-position: center; padding: 60px 0;">
+  <div class="center_om" style="background-color: #0c2340; padding: 100px 0;">
     <div class="container-xl text-center text-white">
-      <h1 class="fw-bold text-uppercase mb-2" style="font-size: 2.6rem;">Impact Stories</h1>
+      <h1 class="fw-bold text-uppercase">Impact Stories</h1>
       <h6 class="fw-bold">
-        <a href="index.php" class="text-white text-decoration-none">Home</a>
-        <span class="mx-2">/</span>
-        <span class="text-white">Impact Stories</span>
+        <a href="index.php" class="text-white">Home</a> <span class="mx-2">/</span>Impact Stories
       </h6>
     </div>
   </div>

@@ -49,9 +49,9 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Events</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Upcoming Events</a></li>
-              <li><a class="dropdown-item" href="#">Past Events</a></li>
-              <li><a class="dropdown-item" href="#">Event Registration</a></li>
+              <li><a class="dropdown-item" href="upcoming-events.php">Upcoming Events</a></li>
+              <li><a class="dropdown-item" href="past-events.php">Past Events</a></li>
+              <li><a class="dropdown-item" href="event-registration.php">Event Registration</a></li>
             </ul>
           </li>
 
@@ -59,9 +59,9 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">News & Media</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">News / Blog</a></li>
-              <li><a class="dropdown-item" href="#">Media Gallery</a></li>
-              <li><a class="dropdown-item" href="#">Downloads</a></li>
+              <li><a class="dropdown-item" href="news-blog.php">News / Blog</a></li>
+              <li><a class="dropdown-item" href="media-gallery.php">Media Gallery</a></li>
+              <li><a class="dropdown-item" href="downloads.php">Downloads</a></li>
             </ul>
           </li>
 
@@ -69,9 +69,9 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Get Involved</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Volunteer</a></li>
-              <li><a class="dropdown-item" href="#">Donate</a></li>
-              <li><a class="dropdown-item" href="#">Partner with Us</a></li>
+              <li><a class="dropdown-item" href="volunteer.php">Volunteer</a></li>
+              <li><a class="dropdown-item" href="donate.php">Donate</a></li>
+              <li><a class="dropdown-item" href="partner.php">Partner with Us</a></li>
             </ul>
           </li>
 
