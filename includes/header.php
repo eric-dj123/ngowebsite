@@ -26,9 +26,9 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Who We Are</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">About Us</a></li>
-              <li><a class="dropdown-item" href="#">Our Team</a></li>
-              <li><a class="dropdown-item" href="#">Partners</a></li>
+              <li><a class="dropdown-item" href="about.php">About Us</a></li>
+              <li><a class="dropdown-item" href="team.php">Our Team</a></li>
+              <li><a class="dropdown-item" href="partners.php">Partners</a></li>
             </ul>
           </li>
 
@@ -36,12 +36,12 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">What We Do</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Programs</a></li>
-              <li><a class="dropdown-item" href="#">Vocational Training</a></li>
-              <li><a class="dropdown-item" href="#">Women Empowerment</a></li>
-              <li><a class="dropdown-item" href="#">Youth Engagement</a></li>
-              <li><a class="dropdown-item" href="#">Impact Stories</a></li>
-              <li><a class="dropdown-item" href="#">Testimonials</a></li>
+              <li><a class="dropdown-item" href="programs.php">Programs</a></li>
+              <li><a class="dropdown-item" href="vocationaltraining.php">Vocational Training</a></li>
+              <li><a class="dropdown-item" href="Womenempowerment.php">Women Empowerment</a></li>
+              <li><a class="dropdown-item" href="youthengagement.php">Youth Engagement</a></li>
+              <li><a class="dropdown-item" href="impactstories.php">Impact Stories</a></li>
+              <li><a class="dropdown-item" href="testimonials.php">Testimonials</a></li>
             </ul>
           </li>
 
