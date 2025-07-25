@@ -6,7 +6,7 @@
 <?php include 'includes/header.php'; ?>
 
 <!-- Hero Section -->
-<section id="center" class="center_about">
+<section id="center" class="center_about">  
   <div class="center_om" style="background-color: #0c2340; padding: 100px 0;">
     <div class="container-xl text-center text-white">
       <h1 class="fw-bold text-uppercase">TestimonialsG</h1>

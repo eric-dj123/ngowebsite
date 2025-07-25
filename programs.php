@@ -3,96 +3,121 @@
 <head>
   <?php include 'includes/title.php'; ?>
   <?php include 'includes/head.php'; ?>
+  <style>
+    .program-box {
+      background: #f9f9f9;
+      padding: 25px;
+      border-left: 5px solid #009688;
+      border-radius: 6px;
+      margin-bottom: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .program-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .program-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      border: 2px solid #009688;
+    }
+
+    .btn-readmore {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #009688;
+      color: #fff;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn-readmore:hover {
+      background-color: #00796b;
+    }
+  </style>
 </head>
 <body>
   <?php include 'includes/header.php'; ?>
-<!-- Hero Section -->
-<section id="center" class="center_about">
-  <div class="center_om bg_backn1" style="background-color: #0c2340; padding: 40px 0;">
-    <div class="container-xl text-center text-white">
-      <!-- Heading -->
-      <h1 class="fw-bold text-uppercase mb-2" style="font-size: 2.4rem; letter-spacing: 0.5px; color: #00d4a7;">
-        Our Programs
-      </h1>
-
-      <!-- Breadcrumb -->
-      <nav aria-label="breadcrumb" class="d-flex justify-content-center mb-3">
-        <ol class="breadcrumb bg-transparent p-0 m-0">
-          <li class="breadcrumb-item">
-            <a href="index.php" class="text-light text-decoration-none fw-semibold">Home</a>
-          </li>
-          <li class="breadcrumb-item active text-white fw-semibold" aria-current="page">Our Programs</li>
-        </ol>
-      </nav>
-
-      <!-- Program Intro -->
-      <div class="mx-auto" style="max-width: 720px;">
-        <p class="fw-semibold mb-3" style="font-size: 1.05rem; color: #f0f0f0;">
-          <span style="color: #00d4a7; font-weight: 600;">GURD-Rwanda</span> runs four life-changing programs that empower rural communities, especially women and youth:
-        </p>
-        <ul class="list-unstyled text-start d-inline-block" style="color: #e0f7fa; font-weight: 600;">
-          <li class="mb-1">✅ <span style="color: #ffffff;">Sexual Reproductive Health and Rights</span></li>
-          <li class="mb-1">✅ <span style="color: #ffffff;">Education Outcomes</span></li>
-          <li class="mb-1">✅ <span style="color: #ffffff;">Youth Development and Entrepreneurship</span></li>
-          <li class="mb-1">✅ <span style="color: #ffffff;">Building Rural Youth Capacity</span></li>
-        </ul>
-      </div>
-    </div>
+<section class="py-5" style="background-color: #2a3756;">
+  <div class="container">
+    <h2 class="fw-bold text-white mb-3" style="font-size: 2.5rem;">Our Programs</h2>
+    <p class="fw-bold mb-4" style="color: #f5c518; font-size: 1.2rem;">
+      GURD-Rwanda has 5 programs
+    </p>
+    <ol class="text-white fw-bold fs-5 ps-3">
+      <li>. LIFE (Leadership, Integrity, Focus, Empowerment) Clubs – Life Skills for Girls</li>
+      <li>2. ICYIZERE Program – Vocational Education for Teen Mothers</li>
+      <li>3. WEEP – Women Economic Empowerment Program</li>
+      <li>4. SRHR – Sexual and Reproductive Health & Rights Program</li>
+      <li>5. Educational & Scholarship Support for Teen Mothers</li>
+    </ol>
   </div>
 </section>
 
-
-
-
-  <!-- Programs Section -->
   <section class="py-5 bg-white">
     <div class="container">
-      <h2 class="fw-bold text-center mb-4" style="color:#0c2340;">Building Resilient Communities Through Inclusive Programs</h2>
-      <p class="text-muted mb-5 text-center">
-        GURD-Rwanda runs 4 flagship programs designed to uplift vulnerable populations in rural areas—especially young people, women, and children—through holistic, community-driven, and sustainable development strategies.
-      </p>
+      <h1 class="fw-bold text-center mb-5" style="color:#0c2340;">GURD-Rwanda: Extended Program Descriptions</h1>
 
-      <div class="row g-4">
+      <div class="row">
+
         <!-- Program 1 -->
         <div class="col-md-6">
-          <div class="rounded shadow p-3 h-100 bg-light" style="border: 2px solid #009688;">
-            <img src="img/r1.png" alt="Sexual Reproductive Health" class="img-fluid rounded mb-3" style="border: 2px solid #009688;">
-            <h5 class="fw-bold text-primary">1. Sexual Reproductive Health and Rights</h5>
-            <p class="text-muted mb-0">We raise awareness and provide access to comprehensive sexual and reproductive health education and services, especially targeting youth and women in underserved communities.</p>
+          <div class="program-box">
+            <img src="img/15.jpg" alt="LIFE Clubs" class="program-img">
+            <h3 class="text-primary fw-bold">1. LIFE (Leadership, Integrity, Focus, Empowerment) Clubs – Life Skills for Girls</h3>
+            <p>The LIFE Clubs program empowers adolescent girls through life skills and personal development training. It emphasizes confidence, resilience, self-reflection, and leadership through workshops, peer-led discussions, and mentorship. GURD-Rwanda aims to scale this program across the Western Province.</p>
+            <a href="#" class="btn-readmore">Read More</a>
           </div>
         </div>
 
         <!-- Program 2 -->
         <div class="col-md-6">
-          <div class="rounded shadow p-3 h-100 bg-light" style="border: 2px solid #009688;">
-            <img src="img/r2.png" alt="Education Outcomes" class="img-fluid rounded mb-3" style="border: 2px solid #009688;">
-            <h5 class="fw-bold text-primary">2. Education Outcomes</h5>
-            <p class="text-muted mb-0">Our education initiatives focus on improving learning outcomes through access to quality education, retention support, and advocacy for girls’ education and marginalized youth.</p>
+          <div class="program-box">
+            <img src="img/16.jpg" alt="ICYIZERE Program" class="program-img">
+            <h3 class="text-primary fw-bold">2. ICYIZERE Program – Vocational Education for Teen Mothers</h3>
+            <p>ICYIZERE (“Hope”) helps out-of-school teen mothers rebuild their lives through certified vocational courses in trades like tailoring, culinary arts, and IT. The program includes mentorship, trauma counseling, transport support, and connects graduates to jobs and business opportunities.</p>
+            <a href="#" class="btn-readmore">Read More</a>
           </div>
         </div>
 
         <!-- Program 3 -->
         <div class="col-md-6">
-          <div class="rounded shadow p-3 h-100 bg-light" style="border: 2px solid #009688;">
-            <img src="img/r4.png" alt="Youth Development" class="img-fluid rounded mb-3" style="border: 2px solid #009688;">
-            <h5 class="fw-bold text-primary">3. Youth Development and Entrepreneurship</h5>
-            <p class="text-muted mb-0">We empower youth through life skills, vocational training, and entrepreneurship support to foster innovation, self-reliance, and leadership in rural communities.</p>
+          <div class="program-box">
+            <img src="img/17.jpg" alt="WEEP Program" class="program-img">
+            <h3 class="text-primary fw-bold">3. WEEP – Women Economic Empowerment Program</h3>
+            <p>WEEP supports young women, especially teen mothers, to become financially independent through job matching, VSLA savings, business training, and access to youth-friendly microloans. It promotes entrepreneurship, family planning, and long-term financial growth.</p>
+            <a href="#" class="btn-readmore">Read More</a>
           </div>
         </div>
 
         <!-- Program 4 -->
         <div class="col-md-6">
-          <div class="rounded shadow p-3 h-100 bg-light" style="border: 2px solid #009688;">
-            <img src="img/r5.png" alt="Building Rural Youth Capacity" class="img-fluid rounded mb-3" style="border: 2px solid #009688;">
-            <h5 class="fw-bold text-primary">4. Building Rural Youth Capacity</h5>
-            <p class="text-muted mb-0">We strengthen youth capacity in rural areas through mentorship, community organizing, and leadership development, encouraging local ownership and long-term impact.</p>
+          <div class="program-box">
+            <img src="img/19.jpg" alt="SRHR Program" class="program-img">
+            <h3 class="text-primary fw-bold">4. SRHR – Sexual and Reproductive Health & Rights Program</h3>
+            <p>GURD-Rwanda’s SRHR initiative raises awareness and promotes youth access to reproductive health services. It involves peer educators, school sessions, radio programs, and public campaigns addressing puberty, consent, STIs, and gender-based violence.</p>
+            <a href="#" class="btn-readmore">Read More</a>
           </div>
         </div>
-      </div>
 
-      <!-- Overall Programs Image -->
-      <div class="text-center mt-5">
-        <img src="img/programs.PNG" alt="GURD-Rwanda Programs Overview" class="img-fluid rounded shadow" style="max-width: 700px; border: 3px solid #009688;">
+        <!-- Program 5 -->
+        <div class="col-md-6">
+          <div class="program-box">
+            <img src="img/18.jpg" alt="Educational Support" class="program-img">
+            <h3 class="text-primary fw-bold">5. Educational & Scholarship Support for Teen Mothers</h3>
+            <p>This program enables teen mothers to return to school by paying tuition, providing school supplies, childcare items, and ongoing counseling. It promotes inclusive education policies and flexible learning options so young mothers can complete their studies.</p>
+            <a href="#" class="btn-readmore">Read More</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
