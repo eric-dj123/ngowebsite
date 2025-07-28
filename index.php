@@ -17,54 +17,53 @@ include 'includes/header.php'
 
 <section id="center" class="center_home">
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    
+    <!-- Indicators -->
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
 
+    <!-- Slides -->
     <div class="carousel-inner">
+
       <!-- Slide 1 -->
       <div class="carousel-item active">
-        <img src="img/1.jpg" class="d-block w-100" alt="...">
+        <img src="img/1.jpg" class="d-block w-100 carousel-image" alt="Slide 1">
         <div class="carousel-caption d-md-block">
           <h1 class="typing heading-1">Plans For a New Donation</h1>
-          <p class="mt-3 w-50 text-light fs-5 animate__animated animate__fadeInUp animate__delay-2s">
-            There are many variations of passages available but the majority have suffered alteration in some form by injected humour or randomised words.
-          </p>
-          <h6 class="mb-0 mt-4 animate__animated animate__fadeInUp animate__delay-3s">
-            <a class="button" href="#">Donate Now</a>
+          <p class="mt-3 text-light fs-5">There are many variations of passages available but the majority have suffered alteration in some form by injected humour or randomised words.</p>
+          <h6 class="mt-4">
+            <a class="btn btn-danger px-4 py-2 rounded-pill fw-bold shadow-sm" href="#">Donate Now</a>
           </h6>
         </div>
       </div>
 
       <!-- Slide 2 -->
       <div class="carousel-item">
-        <img src="img/2.JPG" class="d-block w-100" alt="...">
+        <img src="img/2.jpg" class="d-block w-100 carousel-image" alt="Slide 2">
         <div class="carousel-caption d-md-block">
           <h1 class="typing heading-2">The Prosperity Begins Today</h1>
-          <p class="mt-3 w-50 text-light fs-5 animate__animated animate__fadeInUp animate__delay-2s">
-            There are many variations of passages available but the majority have suffered alteration in some form by injected humour or randomised words.
-          </p>
-          <h6 class="mb-0 mt-4 animate__animated animate__fadeInUp animate__delay-3s">
-            <a class="button" href="#">See The Plan</a>
+          <p class="mt-3 text-light fs-5">There are many variations of passages available but the majority have suffered alteration in some form by injected humour or randomised words.</p>
+          <h6 class="mt-4">
+            <a class="btn btn-primary px-4 py-2 rounded-pill fw-bold shadow-sm" href="#">See The Plan</a>
           </h6>
         </div>
       </div>
 
       <!-- Slide 3 -->
       <div class="carousel-item">
-        <img src="img/3.jpeg" class="d-block w-100" alt="...">
+        <img src="img/3.jpeg" class="d-block w-100 carousel-image" alt="Slide 3">
         <div class="carousel-caption d-md-block">
           <h1 class="typing heading-3">Now, Today Everything Changes</h1>
-          <p class="mt-3 w-50 text-light fs-5 animate__animated animate__fadeInUp animate__delay-2s">
-            There are many variations of passages available but the majority have suffered alteration in some form by injected humour or randomised words.
-          </p>
-          <h6 class="mb-0 mt-4 animate__animated animate__fadeInUp animate__delay-3s">
-            <a class="button" href="#">Upcoming Events</a>
+          <p class="mt-3 text-light fs-5">There are many variations of passages available but the majority have suffered alteration in some form by injected humour or randomised words.</p>
+          <h6 class="mt-4">
+            <a class="btn btn-warning text-dark px-4 py-2 rounded-pill fw-bold shadow-sm" href="#">Upcoming Events</a>
           </h6>
         </div>
       </div>
+
     </div>
 
     <!-- Controls -->
@@ -76,15 +75,24 @@ include 'includes/header.php'
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+
   </div>
 </section>
 
+
 <!-- 🔠 Typing Animation Styles -->
 <style>
+/* 🔽 Reduced height for carousel images */
+.carousel-image {
+  height: 350px; /* You can change this to 300px or 280px if needed */
+  object-fit: cover;
+}
+
+/* ✨ Typing animation */
 .typing {
   font-family: 'Segoe UI', sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.2rem;
   color: #fff;
   overflow: hidden;
   white-space: nowrap;
@@ -92,404 +100,284 @@ include 'includes/header.php'
   display: inline-block;
 }
 
-.heading-1 {
-  animation: typing1 3s steps(30, end), blink 0.8s step-end infinite;
-}
+.heading-1 { animation: typing1 2.5s steps(30, end), blink 0.8s step-end infinite; }
+.heading-2 { animation: typing2 2.5s steps(30, end), blink 0.8s step-end infinite; }
+.heading-3 { animation: typing3 2.5s steps(30, end), blink 0.8s step-end infinite; }
 
-.heading-2 {
-  animation: typing2 3s steps(35, end), blink 0.8s step-end infinite;
-}
-
-.heading-3 {
-  animation: typing3 3s steps(35, end), blink 0.8s step-end infinite;
-}
-
-@keyframes typing1 {
-  from { width: 0 }
-  to { width: 23ch } /* Adjust to match character count */
-}
-
-@keyframes typing2 {
-  from { width: 0 }
-  to { width: 30ch }
-}
-
-@keyframes typing3 {
-  from { width: 0 }
-  to { width: 32ch }
-}
+@keyframes typing1 { from { width: 0 } to { width: 23ch } }
+@keyframes typing2 { from { width: 0 } to { width: 28ch } }
+@keyframes typing3 { from { width: 0 } to { width: 30ch } }
 
 @keyframes blink {
   0%, 100% { border-color: transparent }
   50% { border-color: white }
 }
+
+/* 📱 Responsive adjustments */
+@media (max-width: 768px) {
+  .typing {
+    font-size: 1.5rem;
+  }
+  .carousel-caption {
+    bottom: 10%;
+  }
+}
 </style>
 
-<section id="serv_pg" class="p_3">
+
+<!-- Impact Section -->
+<section id="spec" class="py-5" style="background-color: #2a3756;">
   <div class="container-xl">
-    <!-- Service Icons Section -->
-    <div class="row serv_pg1">
-      <div class="col-md-3 col-sm-6">
-        <div class="serv_pg1l">
-          <div class="serv_pg1li row">
-            <div class="col-md-3">
-              <div class="serv_pg1lil">
-                <span class="font_50 col_red lh-1"><i class="fa fa-hand-holding-heart"></i></span>
-              </div>
-            </div>
-            <div class="col-md-9">
-              <div class="serv_pg1lir">
-                <h5>Humanitarian Aid</h5>
-                <h6 class="mb-0">Providing emergency support in crises</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-sm-6">
-        <div class="serv_pg1l">
-          <div class="serv_pg1li row">
-            <div class="col-md-3">
-              <div class="serv_pg1lil">
-                <span class="font_50 text-warning lh-1"><i class="fa fa-graduation-cap"></i></span>
-              </div>
-            </div>
-            <div class="col-md-9">
-              <div class="serv_pg1lir">
-                <h5>Education Support</h5>
-                <h6 class="mb-0">Scholarships & school infrastructure</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-sm-6">
-        <div class="serv_pg1l">
-          <div class="serv_pg1li row">
-            <div class="col-md-3">
-              <div class="serv_pg1lil">
-                <span class="font_50 text-info lh-1"><i class="fa fa-water"></i></span>
-              </div>
-            </div>
-            <div class="col-md-9">
-              <div class="serv_pg1lir">
-                <h5>Clean Water Projects</h5>
-                <h6 class="mb-0">Drilling boreholes in rural areas</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-sm-6">
-        <div class="serv_pg1l">
-          <div class="serv_pg1li row">
-            <div class="col-md-3">
-              <div class="serv_pg1lil">
-                <span class="font_50 col_blue lh-1"><i class="fa fa-users"></i></span>
-              </div>
-            </div>
-            <div class="col-md-9">
-              <div class="serv_pg1lir">
-                <h5>Empowerment</h5>
-                <h6 class="mb-0">Training youth & women in entrepreneurship</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Section Title -->
- 
-
-
-<section id="spec" class="bg_blue pt-5 pb-5">
-  <div class="container-xl">
-    <div class="row spec_1">
-      <!-- Girls benefited -->
-      <div class="col-md-3 col-sm-6">
-        <div class="spec_1i">
-          <h1 class="text-white font_60">3,500</h1>
-          <h6 class="mb-0 text-white-50 mt-3">
-            <i class="fa-solid fa-children fs-3 align-middle col_red me-2"></i>
-            Girls benefited from our programs
-          </h6>
-        </div>
-      </div>
-
-      <!-- School fees paid -->
-      <div class="col-md-3 col-sm-6">
-        <div class="spec_1i">
-          <h1 class="text-white font_60">15</h1>
-          <h6 class="mb-0 text-white-50 mt-3">
-            <i class="fa-solid fa-graduation-cap fs-3 align-middle col_red me-2"></i>
-            Schools fees paid for students in secondary schools
-          </h6>
-        </div>
-      </div>
-
-      <!-- SRHR clubs -->
-      <div class="col-md-3 col-sm-6">
-        <div class="spec_1i">
-          <h1 class="text-white font_60">10</h1>
-          <h6 class="mb-0 text-white-50 mt-3">
-            <i class="fa-solid fa-people-group fs-3 align-middle col_red me-2"></i>
-            SRHR Clubs established in schools
-          </h6>
-        </div>
-      </div>
-
-      <!-- Hygienic pads -->
-      <div class="col-md-3 col-sm-6">
-        <div class="spec_1i">
-          <h1 class="text-white font_60">600</h1>
-          <h6 class="mb-0 text-white-50 mt-3">
-            <i class="fa-solid fa-kit-medical fs-3 align-middle col_red me-2"></i>
-            Provision of Hygienic pads
-          </h6>
-        </div>
-      </div>
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" style="font-size: 34px; color: #ffffff;">Our Impact in Numbers</h2>
+      <p style="color: #d0d6e2;">Measuring the real difference we make in communities across Rwanda</p>
     </div>
-  </div>
-</section>
 
+    <!-- Counters -->
+    <div class="row g-4 text-center">
 
-
-	<section id="goal" class="p_3">
-		<div class="container-xl">
-			<div class="goal_1 row mb-4 text-center">
-				<div class="col-md-12">
-  <h1 class="col_blue">Goals & Achievements</h1>
-  <p class="mb-0">
-    At GURD Rwanda, we are committed to creating lasting impact in communities through our programs in education, health, and youth empowerment.
-    <br>
-    With every project, we strive to reach more lives, strengthen resilience, and promote equality—one goal at a time.
-  </p>
-</div>
-
-			</div>
-			<div class="goal_2 row">
-				<div class="col-md-6">
-					<div class="goal_2l position-relative">
-						<div class="goal_2l1">
-							<div class="grid clearfix">
-								<figure class="effect-jazz mb-0">
-									<a href="#"><img src="img/4.JPG" class="w-100" alt="abc"></a>
-								</figure>
-							</div>
-						</div>
-						<div class="goal_2l2 position-absolute w-100 h-100 top-0 bg_backo text-center">
-							<span><a class="font_70 col_red" href="#"><i class="fa fa-youtube-play"></i></a></span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="goal_2r">
-						<h3 class="mb-3">120 Goals Accomplished so far</h3>
-						<p>Glorious United for Rural Development (GURD) is a non-profit organization that was founded in 2020 by Fidele, with the mission to improve the lives of vulnerable youth and teenagers in rural areas. In addition to Fidele , 13 other individuals joined him to establish GURD, all of whom were passionate about improving the lives of young people in rural areas..</p>
-						<p>Through its education, health, and community development initiatives, GURD aims to address issues like unplanned pregnancy among young people, poverty-related school dropout, and lack of life skills among young people/ teenagers.</p>
-                        <p>The organization is committed to transforming the lives of young people and empowering them to reach their full potential.</p>
-					
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-<section id="contri" style="background: url('img/5.jpg') no-repeat center center / cover; padding: 80px 0; position: relative;">
-  <div style="background-color: rgba(0, 64, 128, 0.75); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
-  <div class="container-xl position-relative" style="z-index: 2;">
-    <div class="row text-center">
-      <div class="col-md-12">
-        <h1 class="fw-bold text-white" style="font-size: 36px;">Get Involved</h1>
-        <h6 class="text-white-50" style="font-size: 16px;">Contribute to Changing Lives Across Rwanda</h6>
-        <p class="mt-4 mx-auto text-white-50" style="max-width: 750px; font-size: 15px; line-height: 1.8;">
-          Join <strong>GURD Rwanda</strong> in empowering communities and building a brighter future.
-          Your involvement — whether as a donor, volunteer, or partner — helps us deliver programs in
-          girls’ education, health rights, clean water access, and youth empowerment.
-          <br><br>
-          Together, we can reach more vulnerable populations and achieve lasting, sustainable change.
-        </p>
-        <div class="mt-4">
-          <a class="btn" href="donation.html" style="background-color: #ffffff; color: #004080; font-weight: 600; padding: 10px 28px; border-radius: 30px; font-size: 15px; text-transform: uppercase; transition: all 0.3s;">
-            Donate Now
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section id="about_h" class="p-5 bg-light">
-  <div class="container-xl">
-    <div class="row align-items-center">
-      
-      <!-- Left Features -->
-      <div class="col-md-4 text-end pe-md-5">
-        <h3 class="text-primary">Community Development</h3>
-        <p>We work closely with rural communities to facilitate sustainable development through training, resources, and local leadership.</p>
-        
-        <h3 class="mt-4 text-primary">Education for All</h3>
-        <p>From primary schools to vocational training, we ensure equal access to quality education for girls and youth.</p>
-        
-        <h3 class="mt-4 text-primary">Healthcare & Hygiene</h3>
-        <p>We support mobile clinics and hygiene education—providing essential resources to vulnerable communities.</p>
-      </div>
-
-      <!-- Center Image -->
-      <div class="col-md-4 mb-4 mb-md-0">
-        <div class="shadow rounded overflow-hidden">
-          <img src="img/7.jpg" class="w-100" alt="GURD Rwanda Programs">
+      <!-- Girls Benefited -->
+      <div class="col-6 col-md-4 col-lg-2 offset-lg-1">
+        <div class="bg-white rounded p-4 h-100 shadow-sm">
+          <div class="text-danger fs-2"><i class="fa-solid fa-children"></i></div>
+          <h1 class="text-dark fw-bold mt-2 counter" data-count="4560">0</h1>
+          <p class="small mt-1 text-muted">Girls Benefited</p>
         </div>
       </div>
 
-      <!-- Right Features -->
-      <div class="col-md-4 ps-md-5">
-        <h3 class="text-primary">Youth Empowerment</h3>
-        <p>Our youth initiatives include leadership workshops, mentorship programs, and entrepreneurship challenges.</p>
-        
-        <h3 class="mt-4 text-primary">Water & Sanitation</h3>
-        <p>We drill boreholes and conduct sanitation campaigns to ensure safe water access in remote areas.</p>
-        
-        <h3 class="mt-4 text-primary">Volunteer Engagement</h3>
-        <p>GURD Rwanda thrives on the dedication of volunteers who help us deliver services, outreach, and events.</p>
+      <!-- School Fees Paid -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="bg-white rounded p-4 h-100 shadow-sm">
+          <div class="text-danger fs-2"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h1 class="text-dark fw-bold mt-2 counter" data-count="25">0</h1>
+          <p class="small mt-1 text-muted">Secondary School Fees Paid</p>
+        </div>
+      </div>
+
+      <!-- SRHR Clubs -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="bg-white rounded p-4 h-100 shadow-sm">
+          <div class="text-danger fs-2"><i class="fa-solid fa-people-group"></i></div>
+          <h1 class="text-dark fw-bold mt-2 counter" data-count="11">0</h1>
+          <p class="small mt-1 text-muted">SRHR Clubs in Schools</p>
+        </div>
+      </div>
+
+      <!-- Hygienic Pads -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="bg-white rounded p-4 h-100 shadow-sm">
+          <div class="text-danger fs-2"><i class="fa-solid fa-kit-medical"></i></div>
+          <h1 class="text-dark fw-bold mt-2 counter" data-count="5500">0</h1>
+          <p class="small mt-1 text-muted">Hygienic Pads Provided</p>
+        </div>
+      </div>
+
+      <!-- Women Empowered -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="bg-white rounded p-4 h-100 shadow-sm">
+          <div class="text-danger fs-2"><i class="fa-solid fa-person-dress"></i></div>
+          <h1 class="text-dark fw-bold mt-2 counter" data-count="38">0</h1>
+          <p class="small mt-1 text-muted">Women Empowered</p>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
-<section id="programs" class="py-5 bg-white">
-  <div class="container-xl">
-    <!-- Title -->
-    <div class="row text-center mb-5">
-      <div class="col-md-12">
-        <h2 class="fw-bold text-primary" style="font-size: 32px;">Our Programs</h2>
-        <p class="text-muted" style="max-width: 700px; margin: auto; font-size: 16px;">
-          GURD Rwanda delivers targeted community programs across multiple sectors—from education and health to water access and economic opportunity.
-          Explore our core initiatives and see how your support makes a tangible difference.
-        </p>
-      </div>
-    </div>
 
-    <!-- Program Cards with Bold Borders -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter");
+    let hasRun = false;
+
+    function animateCount(counter) {
+      const target = +counter.getAttribute("data-count");
+      let count = 0;
+      const speed = 700;
+      const increment = Math.ceil(target / speed);
+
+      const update = () => {
+        if (count < target) {
+          count += increment;
+          counter.innerText = count.toLocaleString();
+          requestAnimationFrame(update);
+        } else {
+          counter.innerText = target.toLocaleString();
+        }
+      };
+      update();
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !hasRun) {
+          counters.forEach(counter => animateCount(counter));
+          hasRun = true;
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    if (counters.length) {
+      observer.observe(document.querySelector("#spec"));
+    }
+  });
+</script>
+
+
+<section class="py-5 bg-white">
+  <div class="container">
+    <h1 class="fw-bold text-center mb-5" style="color:#0c2340;">GURD-Rwanda: Extended Program Descriptions</h1>
+
     <div class="row g-4">
-      <!-- Education -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow-sm border-3 border-primary rounded-4">
-          <img src="img/1.jpg" class="card-img-top rounded-top-4" alt="Education Program">
-          <div class="card-body">
-            <h5 class="card-title text-primary">Education Support</h5>
-            <p class="card-text">Scholarships, school supplies & vocational training for girls and youth.</p>
+
+      <!-- Program Card -->
+      <div class="col-md-4">
+        <div class="program-box border rounded shadow-sm p-3 h-100 bg-light">
+          <div class="image-wrapper mb-3">
+            <img src="img/201.jpg" alt="LIFE Clubs" class="img-fluid rounded">
           </div>
+          <h5 class="text-primary fw-bold">1. LIFE (Leadership, Integrity, Focus, Empowerment) Clubs – Life Skills for Girls</h5>
+          <p class="text-muted">Empowers adolescent girls through life skills training, mentorship, and leadership development. Aims to scale across the Western Province.</p>
+          <a href="lifeclubs.php" class="btn btn-sm btn-outline-primary">Read More</a>
         </div>
       </div>
 
-      <!-- Health -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow-sm border-3 border-success rounded-4">
-          <img src="img/5.jpg" class="card-img-top rounded-top-4" alt="Health Program">
-          <div class="card-body">
-            <h5 class="card-title text-success">Health & Hygiene</h5>
-            <p class="card-text">Mobile clinics, hygiene awareness and distribution of sanitary pads.</p>
+      <!-- Program Card -->
+      <div class="col-md-4">
+        <div class="program-box border rounded shadow-sm p-3 h-100 bg-light">
+          <div class="image-wrapper mb-3">
+            <img src="img/303.jpeg" alt="ICYIZERE Program" class="img-fluid rounded">
           </div>
+          <h5 class="text-primary fw-bold">2. ICYIZERE Program – Vocational Education for Teen Mothers</h5>
+          <p class="text-muted">Offers certified training, mentorship, and job connections to teen mothers, helping them rebuild their lives and become self-sufficient.</p>
+          <a href="icyizere.php" class="btn btn-sm btn-outline-primary">Read More</a>
         </div>
       </div>
 
-      <!-- Water -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow-sm border-3 border-info rounded-4">
-          <img src="img/5.jpg" class="card-img-top rounded-top-4" alt="Water Program">
-          <div class="card-body">
-            <h5 class="card-title text-info">Clean Water Access</h5>
-            <p class="card-text">Borehole drilling and community sanitation initiatives.</p>
+      <!-- Program Card -->
+      <div class="col-md-4">
+        <div class="program-box border rounded shadow-sm p-3 h-100 bg-light">
+          <div class="image-wrapper mb-3">
+            <img src="img/100.jpeg" alt="WEEP Program" class="img-fluid rounded">
           </div>
+          <h5 class="text-primary fw-bold">3. WEEP – Women Economic Empowerment Program</h5>
+          <p class="text-muted">Supports teen mothers through business training, VSLA savings, and access to microloans for sustainable income and independence.</p>
+          <a href="weep.php" class="btn btn-sm btn-outline-primary">Read More</a>
         </div>
       </div>
 
-      <!-- Youth & Women Empowerment -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow-sm border-3 border-warning rounded-4">
-          <img src="img/7.jpg" class="card-img-top rounded-top-4" alt="Youth Empowerment Program">
-          <div class="card-body">
-            <h5 class="card-title text-warning">Youth & Women Empowerment</h5>
-            <p class="card-text">Workshops, mentorship, and small‑business grants.</p>
+      <!-- Program Card -->
+      <div class="col-md-4">
+        <div class="program-box border rounded shadow-sm p-3 h-100 bg-light">
+          <div class="image-wrapper mb-3">
+            <img src="img/109.jpg" alt="SRHR Program" class="img-fluid rounded">
           </div>
+          <h5 class="text-primary fw-bold">4. SRHR – Sexual and Reproductive Health & Rights</h5>
+          <p class="text-muted">Promotes youth access to reproductive health services through education, campaigns, and peer-led sessions on consent and STIs.</p>
+          <a href="srhr" class="btn btn-sm btn-outline-primary">Read More</a>
         </div>
       </div>
+
+      <!-- Program Card -->
+      <div class="col-md-4">
+        <div class="program-box border rounded shadow-sm p-3 h-100 bg-light">
+          <div class="image-wrapper mb-3">
+            <img src="img/18.jpg" alt="Educational Support" class="img-fluid rounded">
+          </div>
+          <h5 class="text-primary fw-bold">5. Educational & Scholarship Support for Teen Mothers</h5>
+          <p class="text-muted">Helps teen mothers return to school by covering tuition, supplies, baby care, and offering flexible learning options and counseling.</p>
+          <a href="scholarships.php" class="btn btn-sm btn-outline-primary">Read More</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
+<!-- Custom Style for Image Height -->
+<style>
+  .image-wrapper {
+    height: 200px;
+    overflow: hidden;
+  }
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .image-wrapper img:hover {
+    transform: scale(1.05);
+  }
+</style>
 
-<section id="work_home" class="py-5 bg-white">
+
+
+<section id="mission_vision_values" class="py-5 bg-light">
   <div class="container-xl">
     <div class="text-center mb-5">
-      <h1 class="fw-bold text-primary" style="font-size: 32px;">Our Work</h1>
+      <h1 class="fw-bold text-primary" style="font-size: 32px;">Our Mission, Vision, and Values</h1>
       <p class="text-muted mx-auto" style="max-width: 700px;">
-        At GURD Rwanda, our approach is transparent and results-driven. Discover the steps we take—from planning to impact—to serve communities across the nation.
+        At GURD Rwanda, our foundation is built on purpose, ambition, and unwavering principles. Learn what drives us.
       </p>
     </div>
 
     <div class="row gy-4">
-      <!-- Step 1 -->
-      <div class="col-sm-6 col-md-3">
-        <div class="p-4 text-center border-start border-5 border-primary">
-          <div class="bg-primary text-white rounded-circle mx-auto" style="width: 60px; height: 60px; line-height: 60px; font-size: 24px;">
-            1
+      <!-- Mission -->
+      <div class="col-md-4">
+        <div class="p-4 text-center shadow-sm bg-white rounded border-start border-5 border-primary h-100">
+          <div class="mb-3">
+            <i class="fas fa-bullseye fa-2x text-primary"></i>
           </div>
-          <h5 class="mt-3">Identify Needs</h5>
-          <p class="text-muted">We connect with communities to assess their challenges and priorities.</p>
+          <h5 class="fw-bold">Our Mission</h5>
+          <p class="text-muted">
+            To empower Rwandan communities through inclusive development programs, innovative education, and sustainable livelihood initiatives.
+          </p>
         </div>
       </div>
 
-      <!-- Step 2 -->
-      <div class="col-sm-6 col-md-3">
-        <div class="p-4 text-center border-start border-5 border-success">
-          <div class="bg-success text-white rounded-circle mx-auto" style="width: 60px; height: 60px; line-height: 60px; font-size: 24px;">
-            2
+      <!-- Vision -->
+      <div class="col-md-4">
+        <div class="p-4 text-center shadow-sm bg-white rounded border-start border-5 border-success h-100">
+          <div class="mb-3">
+            <i class="fas fa-eye fa-2x text-success"></i>
           </div>
-          <h5 class="mt-3">Plan & Design</h5>
-          <p class="text-muted">We collaborate with stakeholders to design impactful, sustainable projects.</p>
+          <h5 class="fw-bold">Our Vision</h5>
+          <p class="text-muted">
+            A resilient, self-reliant society where every individual has equal opportunities to thrive and lead change.
+          </p>
         </div>
       </div>
 
-      <!-- Step 3 -->
-      <div class="col-sm-6 col-md-3">
-        <div class="p-4 text-center border-start border-5 border-info">
-          <div class="bg-info text-white rounded-circle mx-auto" style="width: 60px; height: 60px; line-height: 60px; font-size: 24px;">
-            3
+      <!-- Values -->
+      <div class="col-md-4">
+        <div class="p-4 text-center shadow-sm bg-white rounded border-start border-5 border-warning h-100">
+          <div class="mb-3">
+            <i class="fas fa-heart fa-2x text-warning"></i>
           </div>
-          <h5 class="mt-3">Execute</h5>
-          <p class="text-muted">Our team implements interventions—from borehole drilling to youth training.</p>
+          <h5 class="fw-bold">Our Values</h5>
+          <ul class="text-muted list-unstyled mb-0">
+            <li>✔ Integrity</li>
+            <li>✔ Accountability</li>
+            <li>✔ Inclusiveness</li>
+            <li>✔ Innovation</li>
+            <li>✔ Community-Driven Action</li>
+          </ul>
         </div>
       </div>
-
-      <!-- Step 4 -->
-      <div class="col-sm-6 col-md-3">
-        <div class="p-4 text-center border-start border-5 border-warning">
-          <div class="bg-warning text-white rounded-circle mx-auto" style="width: 60px; height: 60px; line-height: 60px; font-size: 24px;">
-            4
-          </div>
-          <h5 class="mt-3">Evaluate & Scale</h5>
-          <p class="text-muted">We measure outcomes and expand successful programs to other communities.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-4">
-      <a href="work.html" class="btn btn-primary btn-lg">View More Work</a>
     </div>
   </div>
 </section>
 
 
+
 	<section id="blog_h" class="py-5 bg-light">
   <div class="container-xl">
+    <!-- Section Header -->
     <div class="text-center mb-5">
       <h2 class="fw-bold text-primary" style="font-size: 32px;">Our News</h2>
       <p class="text-muted mx-auto" style="max-width: 700px; font-size: 16px;">
@@ -497,72 +385,50 @@ include 'includes/header.php'
       </p>
     </div>
 
+    <!-- News Cards: 2 Per Line -->
+    <?php include "db.php"; ?>
     <div class="row g-4">
-      <!-- Blog Post Card -->
-      <div class="col-md-4">
+      <?php
+        $result = $conn->query("SELECT * FROM posts ORDER BY created_at DESC LIMIT 6");
+        while ($row = $result->fetch_assoc()):
+      ?>
+      <div class="col-md-6">
         <div class="card border border-primary shadow-sm h-100">
           <div class="position-relative overflow-hidden rounded-top">
-            <img src="img/7.jpg" class="card-img-top" alt="Blog post image">
+            <!-- Fixed image size + crop -->
+            <img src="admin/uploads/<?php echo $row['image']; ?>" class="card-img-top" alt="Blog post image"
+                 style="height: 250px; object-fit: cover; width: 100%;">
             <a href="#" class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 text-white opacity-0 hover-opacity-100 transition">
               <i class="fa fa-link fa-2x"></i>
             </a>
           </div>
           <div class="card-body text-center">
             <ul class="list-inline small text-muted mb-2">
-              <li class="list-inline-item"><i class="fa fa-user me-1"></i><a href="#" class="text-decoration-none">Jane Doe</a></li>
-              <li class="list-inline-item"><i class="fa fa-clock me-1"></i>July 28, 2023</li>
+              <li class="list-inline-item"><i class="fa fa-user me-1"></i><a href="#" class="text-decoration-none">Admin</a></li>
+              <li class="list-inline-item"><i class="fa fa-clock me-1"></i><?php echo date("F j, Y", strtotime($row['created_at'])); ?></li>
             </ul>
-            <h5 class="card-title"><a href="#" class="text-dark text-decoration-none">Empowering Girls Through Education</a></h5>
-            <p class="card-text">We launched a new mentorship initiative supporting 200 girls in STEM across rural communities.</p>
-            <a href="#" class="text-primary fw-bold">Learn More <i class="fa fa-chevron-right ms-1"></i></a>
+            <h5 class="card-title">
+              <a href="#" class="text-dark text-decoration-none"><?php echo $row['title']; ?></a>
+            </h5>
+            <p class="card-text"><?php echo $row['short_description']; ?></p>
+            <a href="readmore.php?id=<?php echo $row['id']; ?>" class="text-primary fw-bold">Learn More <i class="fa fa-chevron-right ms-1"></i></a>
           </div>
         </div>
       </div>
-
-      <!-- Blog Post Card -->
-      <div class="col-md-4">
-        <div class="card border border-primary shadow-sm h-100">
-          <div class="position-relative overflow-hidden rounded-top">
-            <img src="img/1.jpg" class="card-img-top" alt="Blog post image">
-            <a href="#" class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 text-white opacity-0 hover-opacity-100 transition">
-              <i class="fa fa-link fa-2x"></i>
-            </a>
-          </div>
-          <div class="card-body text-center">
-            <ul class="list-inline small text-muted mb-2">
-              <li class="list-inline-item"><i class="fa fa-user me-1"></i><a href="#" class="text-decoration-none">John Smith</a></li>
-              <li class="list-inline-item"><i class="fa fa-clock me-1"></i>August 10, 2023</li>
-            </ul>
-            <h5 class="card-title"><a href="#" class="text-dark text-decoration-none">Clean Water Initiative Update</a></h5>
-            <p class="card-text">Our borehole projects have reached 500 families in need, improving health and sanitation standards.</p>
-            <a href="#" class="text-primary fw-bold">Learn More <i class="fa fa-chevron-right ms-1"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Blog Post Card -->
-      <div class="col-md-4">
-        <div class="card border border-primary shadow-sm h-100">
-          <div class="position-relative overflow-hidden rounded-top">
-            <img src="img/1.jpg" class="card-img-top" alt="Blog post image">
-            <a href="#" class="d-flex justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50 text-white opacity-0 hover-opacity-100 transition">
-              <i class="fa fa-link fa-2x"></i>
-            </a>
-          </div>
-          <div class="card-body text-center">
-            <ul class="list-inline small text-muted mb-2">
-              <li class="list-inline-item"><i class="fa fa-user me-1"></i><a href="#" class="text-decoration-none">Mary Akimana</a></li>
-              <li class="list-inline-item"><i class="fa fa-clock me-1"></i>September 5, 2023</li>
-            </ul>
-            <h5 class="card-title"><a href="#" class="text-dark text-decoration-none">Youth Empowerment Workshops</a></h5>
-            <p class="card-text">We hosted career mentorship workshops engaging 300 young people in leadership discussions.</p>
-            <a href="#" class="text-primary fw-bold">Learn More <i class="fa fa-chevron-right ms-1"></i></a>
-          </div>
-        </div>
-      </div>
+      <?php endwhile; ?>
     </div>
+
+    <!-- View More Button -->
+    <div class="text-center mt-5">
+      <a href="all-news.php" class="btn btn-primary px-4 py-2 fw-bold shadow-sm">
+        View More News <i class="fa fa-arrow-right ms-2"></i>
+      </a>
+    </div>
+
   </div>
 </section>
+
+
 <section id="resources" class="py-5 bg-white">
   <div class="container-xl">
     <!-- Section Header -->
@@ -574,113 +440,29 @@ include 'includes/header.php'
     </div>
 
     <!-- Report Cards -->
+    <?php include "db.php"; ?>
     <div class="row g-4 justify-content-center">
-      <!-- Annual Report 2024 -->
+      <?php
+        $result = $conn->query("SELECT * FROM downloads ORDER BY uploaded_at DESC");
+        while ($row = $result->fetch_assoc()):
+          $title = $row['title'];
+       
+          $file = $row['file_path'];
+          $type = $row['file_type'] ?? 'PDF';
+      ?>
       <div class="col-sm-6 col-md-4">
         <div class="p-4 text-center border border-primary rounded shadow-sm h-100">
-          <h5 class="text-primary">Annual Report 2024</h5>
-          <p class="text-muted mb-3">A summary of our impact, financials, and strategic progress for the 2023–2024 year.</p>
-          <a href="docs/GURD_Annual_Report_2024.pdf" class="btn btn-outline-primary" download>
-            Download PDF
+          <h5 class="text-primary"><?php echo htmlspecialchars($title); ?></h5>
+        
+          <a href="admin/uploads/<?php echo htmlspecialchars($file); ?>" class="btn btn-outline-primary" download>
+            Download <?php echo strtoupper($type); ?>
           </a>
         </div>
       </div>
-
-      <!-- Annual Report 2023 -->
-      <div class="col-sm-6 col-md-4">
-        <div class="p-4 text-center border border-primary rounded shadow-sm h-100">
-          <h5 class="text-primary">Annual Report 2023</h5>
-          <p class="text-muted mb-3">Highlights from last year: programs, achievements, and audited financials.</p>
-          <a href="docs/GURD_Annual_Report_2023.pdf" class="btn btn-outline-primary" download>
-            Download PDF
-          </a>
-        </div>
-      </div>
-
-      <!-- Brochure/Impact Overview -->
-      <div class="col-sm-6 col-md-4">
-        <div class="p-4 text-center border border-primary rounded shadow-sm h-100">
-          <h5 class="text-primary">Impact Brochure</h5>
-          <p class="text-muted mb-3">A snapshot of our community work, milestones, and partner information.</p>
-          <a href="docs/GURD_Impact_Brochure.pdf" class="btn btn-outline-primary" download>
-            Download PDF
-          </a>
-        </div>
-      </div>
+      <?php endwhile; ?>
     </div>
   </div>
 </section>
-<section id="events" class="py-5 bg-white">
-  <div class="container-xl">
-    <!-- Header -->
-    <div class="text-center mb-5">
-      <h2 class="fw-bold text-primary" style="font-size: 32px;">Our Events</h2>
-      <p class="text-muted mx-auto" style="max-width: 700px; font-size: 16px;">
-        Join us at our upcoming events or review past gatherings focusing on community development, water access, education, and more.
-      </p>
-    </div>
-
-    <!-- Upcoming Events -->
-    <h3 class="text-secondary mb-4">Upcoming Events</h3>
-    <div class="row g-4 mb-5">
-      <!-- Example Upcoming Event -->
-      <div class="col-md-6">
-        <div class="border border-primary rounded shadow-sm p-4 h-100 d-flex flex-column">
-          <h5 class="text-primary">Clean Water Drill Day</h5>
-          <p class="text-muted mb-1"><i class="fa fa-calendar me-2"></i>June 20, 2025 | 9:00 AM–1:00 PM</p>
-          <p class="text-muted mb-auto"><i class="fa fa-map-marker-alt me-2"></i>Nyamasheke Village, Rwanda</p>
-          <a href="register.html" class="btn btn-primary mt-3 align-self-start">Register Now</a>
-        </div>
-      </div>
-
-      <!-- Second Upcoming Event -->
-      <div class="col-md-6">
-        <div class="border border-primary rounded shadow-sm p-4 h-100 d-flex flex-column">
-          <h5 class="text-primary">Girls’ Leadership Workshop</h5>
-          <p class="text-muted mb-1"><i class="fa fa-calendar me-2"></i>July 5, 2025 | 2:00 PM–5:00 PM</p>
-          <p class="text-muted mb-auto"><i class="fa fa-map-marker-alt me-2"></i>Gisenyi Community Hall</p>
-          <a href="register.html" class="btn btn-primary mt-3 align-self-start">Register Now</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Past Events -->
-    <h3 class="text-secondary mb-4">Past Events</h3>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="border border-secondary rounded shadow-sm">
-          <img src="img/1.jpg" class="w-100 rounded-top" alt="Past event photo">
-          <div class="p-3">
-            <h5 class="text-dark">Youth Vocational Fair 2024</h5>
-            <p class="text-muted"><i class="fa fa-calendar me-2"></i>December 2024</p>
-            <a href="past_event.html" class="text-primary fw-bold">View Recap <i class="fa fa-chevron-right ms-1"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="border border-secondary rounded shadow-sm">
-          <img src="img/1.jpg" class="w-100 rounded-top" alt="Past event photo">
-          <div class="p-3">
-            <h5 class="text-dark">Clean Water Launch 2023</h5>
-            <p class="text-muted"><i class="fa fa-calendar me-2"></i>May 2023</p>
-            <a href="past_event.html" class="text-primary fw-bold">View Recap <i class="fa fa-chevron-right ms-1"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="border border-secondary rounded shadow-sm">
-          <img src="img/1.jpg" class="w-100 rounded-top" alt="Past event photo">
-          <div class="p-3">
-            <h5 class="text-dark">Health & Hygiene Campaign 2022</h5>
-            <p class="text-muted"><i class="fa fa-calendar me-2"></i>September 2022</p>
-            <a href="past_event.html" class="text-primary fw-bold">View Recap <i class="fa fa-chevron-right ms-1"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section id="team_h" class="pt-5 pb-5 bg-light">
   <div class="container-xl">
@@ -691,97 +473,88 @@ include 'includes/header.php'
     </div>
 
     <!-- Board Members -->
-    <div class="mb-4">
-      <h2 class="text-center mb-4" style="color: #333;">Board Members</h2>
-      <div class="row text-center">
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div style="border: 3px solid #007bff; border-radius: 10px; padding: 15px; background: #fff;">
-            <img src="img/p1.JPEG" class="w-100 mb-3" alt="Board Member" style="border-radius: 8px;">
-            <h5 style="margin: 0;">Jean Pierre</h5>
-            <p style="color: gray; font-size: 14px;">Chairperson</p>
-          </div>
-        </div>
-        <!-- Add more Board Members here -->
+<?php include "db.php"; ?>
+<div class="mb-4">
+  <h2 class="text-center mb-4" style="color: #333;">Board Members</h2>
+  <div class="row text-center justify-content-center">
+    <?php
+      $result = $conn->query("SELECT * FROM teams ORDER BY created_at ASC");
+      while ($row = $result->fetch_assoc()):
+        $name = $row['name'];
+        $image = $row['image'];
+        $post = $row['post'];
+    ?>
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div style="border: 3px solid #007bff; border-radius: 10px; padding: 15px; background: #fff;">
+        <img src="admin/uploads/<?php echo htmlspecialchars($image); ?>" class="w-100 mb-3" alt="<?php echo htmlspecialchars($name); ?>" style="border-radius: 8px; object-fit: cover; height: 270px;">
+        <h5 class="mb-1"><?php echo htmlspecialchars($name); ?></h5>
+        <p style="color: gray; font-size: 14px;"><?php echo htmlspecialchars($post); ?></p>
+      </div>
+    </div>
+    <?php endwhile; ?>
+  </div>
+</div>
+
+  <!-- Staff Members -->
+<div>
+  <h2 class="text-center mb-4" style="color: #333;">Staff Members</h2>
+  <div class="row text-center justify-content-center">
+
+    <!-- Staff Member 1 -->
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div style="border: 3px solid #28a745; border-radius: 10px; padding: 15px; background: #fff;">
+        <img src="img/ceo2.jpg" class="w-100 mb-3" alt="Tuyishime Fidele" style="border-radius: 8px;">
+        <h5 class="mb-1">Tuyishime Fidele</h5>
+        <p style="color: gray; font-size: 14px;">Founder, Executive Director</p>
+        <p style="font-size: 14px; margin-bottom: 4px;"><i class="fas fa-phone text-success me-1"></i> (+250) 788 782 246</p>
+        <p style="font-size: 14px;"><i class="fas fa-envelope text-success me-1"></i>tuyishimefidele1986@gmail.com</p>
       </div>
     </div>
 
-    <!-- Staff Members -->
-    <div>
-      <h2 class="text-center mb-4" style="color: #333;">Staff Members</h2>
-      <div class="row text-center">
-        <div class="col-md-3 col-sm-6 mb-4">
-          <div style="border: 3px solid #28a745; border-radius: 10px; padding: 15px; background: #fff;">
-            <img src="img/p2.jpg" class="w-100 mb-3" alt="Staff Member" style="border-radius: 8px;">
-            <h5 style="margin: 0;">Marie Claire</h5>
-            <p style="color: gray; font-size: 14px;">Program Officer</p>
-          </div>
-        </div>
-        <!-- Add more Staff Members here -->
+    <!-- Staff Member 2 -->
+    <div class="col-md-3 col-sm-6 mb-4">
+      <div style="border: 3px solid #28a745; border-radius: 10px; padding: 15px; background: #fff;">
+        <img src="img/op.PNG" class="w-100 mb-3" alt="Gloriose DUSHIME" style="border-radius: 8px;">
+        <h5 class="mb-1">Gloriose DUSHIME</h5>
+        <p style="color: gray; font-size: 14px;">Chief Operations Officer</p>
+        <p style="font-size: 14px; margin-bottom: 4px;"><i class="fas fa-phone text-success me-1"></i> (+250) 783 468 611</p>
+        <p style="font-size: 14px;"><i class="fas fa-envelope text-success me-1"></i>gloriosedushime9@gmail.com</p>
       </div>
+    </div>
+
+  </div>
+</div>
+
     </div>
   </div>
 </section>
-<section id="partners" class="py-5 bg-light">
-  <div class="container-xl">
-    <!-- Header -->
+<?php include "db.php"; ?>
+<section class="py-5 bg-white">
+  <div class="container">
     <div class="text-center mb-5">
-      <h2 class="fw-bold text-primary" style="font-size: 32px;">Our Partners</h2>
-      <p class="text-muted mx-auto" style="max-width: 700px; font-size: 16px;">
-        We’re proud to collaborate with organizations who share our mission of community development and impact.
-      </p>
+      <h2 class="fw-bold text-uppercase" style="color: #0c2340;">Our Partners & Collaborators</h2>
+      <div class="mx-auto" style="width: 60px; height: 4px; background-color: #0c2340;"></div>
     </div>
 
-    <!-- Partner Logos with Green Borders -->
-    <div class="row align-items-center justify-content-center g-4">
-      <!-- Partner 1 -->
-      <div class="col-6 col-sm-4 col-md-2 text-center">
-        <a href="https://partner1.org" target="_blank">
-          <img src="img/t1.JPG" alt="Partner 1" 
-               style="max-width: 120px; 
-                      border: 4px solid #28a745; 
-                      padding: 6px; 
-                      border-radius: 8px;
-                      transition: transform .3s;">
-        </a>
+    <div class="row g-4 justify-content-center">
+      <?php
+        $result = $conn->query("SELECT * FROM sponsors ORDER BY created_at DESC");
+        while ($row = $result->fetch_assoc()):
+          $image = $row['image'];
+          $name  = isset($row['name']) ? $row['name'] : ''; // Optional
+      ?>
+      <div class="col-md-3 col-6">
+        <div class="border border-primary rounded text-center p-3 shadow-sm" style="border-color: #0c2340 !important;">
+          <img src="admin/uploads/<?php echo htmlspecialchars($image); ?>" 
+               class="img-fluid mb-2" 
+               alt="<?php echo htmlspecialchars($name); ?>" 
+               style="max-height: 80px;">
+          <?php if ($name): ?>
+            <p class="text-muted small"><?php echo htmlspecialchars($name); ?></p>
+          <?php endif; ?>
+        </div>
       </div>
-
-      <!-- Partner 2 -->
-      <div class="col-6 col-sm-4 col-md-2 text-center">
-        <a href="https://partner2.org" target="_blank">
-          <img src="img/t2.JPG" alt="Partner 2" 
-               style="max-width: 120px; 
-                      border: 4px solid #28a745; 
-                      padding: 6px; 
-                      border-radius: 8px;
-                      transition: transform .3s;">
-        </a>
-      </div>
-
-      <!-- Partner 3 -->
-      <div class="col-6 col-sm-4 col-md-2 text-center">
-        <a href="https://partner3.org" target="_blank">
-          <img src="img/t3.JPG" alt="Partner 3" 
-               style="max-width: 120px; 
-                      border: 4px solid #28a745; 
-                      padding: 6px; 
-                      border-radius: 8px;
-                      transition: transform .3s;">
-        </a>
-      </div>
-
-      <!-- Partner 4 -->
-      <div class="col-6 col-sm-4 col-md-2 text-center">
-        <a href="https://partner4.org" target="_blank">
-          <img src="img/t4.JPG" alt="Partner 4" 
-               style="max-width: 120px; 
-                      border: 4px solid #28a745; 
-                      padding: 6px; 
-                      border-radius: 8px;
-                      transition: transform .3s;">
-        </a>
-      </div>
-
- 
+      <?php endwhile; ?>
     </div>
   </div>
 </section>

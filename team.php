@@ -29,82 +29,66 @@
       <div class="mx-auto" style="width: 60px; height: 4px; background-color: #0c2340;"></div>
       <p class="text-muted mt-3">Dedicated leaders and professionals powering our mission at GURD.</p>
     </div>
-
-    <!-- Board Members -->
-    <div class="mb-5">
-      <h3 class="fw-bold mb-4" style="color: #0c2340;">Board Members</h3>
-      <div class="row justify-content-center g-4">
-
-        <div class="col-md-4 col-sm-6">
-          <div class="card border-primary shadow-sm h-100 text-center team-card">
-            <img src="img/team1.jpg" class="card-img-top border-bottom" alt="Fidele N.">
-            <div class="card-body">
-              <h5 class="fw-bold text-primary">Fidele N.</h5>
-              <p class="text-muted mb-2">Founder & Executive Director</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 col-sm-6">
-          <div class="card border-primary shadow-sm h-100 text-center team-card">
-            <img src="img/team2.jpg" class="card-img-top border-bottom" alt="Grace I.">
-            <div class="card-body">
-              <h5 class="fw-bold text-primary">Grace I.</h5>
-              <p class="text-muted mb-2">Board Chairperson</p>
-            </div>
-          </div>
-        </div>
-
+      <?php include "db.php"; ?>
+<!-- Board Members -->
+<div class="mb-5">
+  <h3 class="fw-bold mb-4" style="color: #0c2340;">Board Members</h3>
+  <div class="row justify-content-center g-4">
+    <?php
+      $result = $conn->query("SELECT * FROM teams ORDER BY created_at DESC");
+      while ($row = $result->fetch_assoc()):
+        $name = $row['name'];
+        $image = $row['image'];
+        $post = $row['post'];
+    ?>
+    <div class="col-md-4 col-sm-6">
+      <div class="card border-primary shadow-sm h-100 text-center team-card p-3">
+        <img src="admin/uploads/<?php echo htmlspecialchars($image); ?>" 
+             alt="<?php echo htmlspecialchars($name); ?>" 
+             class="w-100 mb-3" 
+             style="border-radius: 8px; object-fit: cover; height: 270px;">
+        <h5 class="mb-1"><?php echo htmlspecialchars($name); ?></h5>
+        <p style="color: gray; font-size: 14px;"><?php echo htmlspecialchars($post); ?></p>
       </div>
     </div>
+    <?php endwhile; ?>
+  </div>
+</div>
+
 
     <!-- Staff Members -->
-    <div class="mb-4">
-      <h3 class="fw-bold mb-4" style="color: #0c2340;">Staff Members</h3>
-      <div class="row justify-content-center g-4">
+   <div class="mb-4">
+  <h3 class="fw-bold mb-4" style="color: #0c2340;">Staff Members</h3>
+  <div class="row justify-content-center g-4">
 
-        <div class="col-md-3 col-sm-6">
-          <div class="card border-primary shadow-sm h-100 text-center team-card">
-            <img src="img/team3.jpg" class="card-img-top border-bottom" alt="Emmanuel K.">
-            <div class="card-body">
-              <h5 class="fw-bold text-primary">Emmanuel K.</h5>
-              <p class="text-muted mb-2">Community Outreach Lead</p>
-            </div>
-          </div>
+    <!-- Staff Member 1 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card border-primary shadow-sm h-100 text-center team-card">
+        <img src="img/ceo2.jpg" class="card-img-top border-bottom" alt="Tuyishime Fidele.">
+        <div class="card-body">
+          <h5 class="fw-bold text-primary">Tuyishime Fidele.</h5>
+          <p class="text-muted mb-1">Founder, Executive Director</p>
+          <p class="mb-1"><i class="fa fa-envelope text-primary me-1"></i> tuyishimefidele1986@gmail.com</p>
+          <p class="mb-0"><i class="fa fa-phone text-primary me-1"></i> (+250) 788 782 246</p>
         </div>
-
-        <div class="col-md-3 col-sm-6">
-          <div class="card border-primary shadow-sm h-100 text-center team-card">
-            <img src="img/team4.jpg" class="card-img-top border-bottom" alt="Sarah T.">
-            <div class="card-body">
-              <h5 class="fw-bold text-primary">Sarah T.</h5>
-              <p class="text-muted mb-2">Program Coordinator</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6">
-          <div class="card border-primary shadow-sm h-100 text-center team-card">
-            <img src="img/team5.jpg" class="card-img-top border-bottom" alt="Eric N.">
-            <div class="card-body">
-              <h5 class="fw-bold text-primary">Eric N.</h5>
-              <p class="text-muted mb-2">Monitoring & Evaluation Officer</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6">
-          <div class="card border-primary shadow-sm h-100 text-center team-card">
-            <img src="img/team6.jpg" class="card-img-top border-bottom" alt="Aline M.">
-            <div class="card-body">
-              <h5 class="fw-bold text-primary">Aline M.</h5>
-              <p class="text-muted mb-2">Youth Empowerment Specialist</p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
+
+    <!-- Staff Member 2 -->
+    <div class="col-md-3 col-sm-6">
+      <div class="card border-primary shadow-sm h-100 text-center team-card">
+        <img src="img/op.PNG" class="card-img-top border-bottom" alt="Gloriose DUSHIME">
+        <div class="card-body">
+          <h5 class="fw-bold text-primary">Gloriose DUSHIME</h5>
+          <p class="text-muted mb-1">Chief Operations Officer</p>
+          <p class="mb-1"><i class="fa fa-envelope text-primary me-1"></i> gloriosedushime9@gmail.com</p>
+          <p class="mb-0"><i class="fa fa-phone text-primary me-1"></i>(+250) 783 468 611</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
   </div>
 </section>

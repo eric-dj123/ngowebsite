@@ -18,6 +18,7 @@
 </section>
 
 <!-- Partners Section -->
+<?php include "db.php"; ?>
 <section class="py-5 bg-white">
   <div class="container">
     <div class="text-center mb-5">
@@ -26,40 +27,28 @@
     </div>
 
     <div class="row g-4 justify-content-center">
-      <!-- Partner Card 1 -->
+      <?php
+        $result = $conn->query("SELECT * FROM sponsors ORDER BY created_at DESC");
+        while ($row = $result->fetch_assoc()):
+          $image = $row['image'];
+          $name  = isset($row['name']) ? $row['name'] : ''; // Optional
+      ?>
       <div class="col-md-3 col-6">
         <div class="border border-primary rounded text-center p-3 shadow-sm" style="border-color: #0c2340 !important;">
-          <img src="img/partner1.png" class="img-fluid mb-2" alt="Partner 1" style="max-height: 80px;">
-          <p class="text-muted small">Partner Name 1</p>
+          <img src="admin/uploads/<?php echo htmlspecialchars($image); ?>" 
+               class="img-fluid mb-2" 
+               alt="<?php echo htmlspecialchars($name); ?>" 
+               style="max-height: 80px;">
+          <?php if ($name): ?>
+            <p class="text-muted small"><?php echo htmlspecialchars($name); ?></p>
+          <?php endif; ?>
         </div>
       </div>
-      
-      <!-- Partner Card 2 -->
-      <div class="col-md-3 col-6">
-        <div class="border border-primary rounded text-center p-3 shadow-sm" style="border-color: #0c2340 !important;">
-          <img src="img/partner2.png" class="img-fluid mb-2" alt="Partner 2" style="max-height: 80px;">
-          <p class="text-muted small">Partner Name 2</p>
-        </div>
-      </div>
-
-      <!-- Partner Card 3 -->
-      <div class="col-md-3 col-6">
-        <div class="border border-primary rounded text-center p-3 shadow-sm" style="border-color: #0c2340 !important;">
-          <img src="img/partner3.png" class="img-fluid mb-2" alt="Partner 3" style="max-height: 80px;">
-          <p class="text-muted small">Partner Name 3</p>
-        </div>
-      </div>
-
-      <!-- Partner Card 4 -->
-      <div class="col-md-3 col-6">
-        <div class="border border-primary rounded text-center p-3 shadow-sm" style="border-color: #0c2340 !important;">
-          <img src="img/partner4.png" class="img-fluid mb-2" alt="Partner 4" style="max-height: 80px;">
-          <p class="text-muted small">Partner Name 4</p>
-        </div>
-      </div>
+      <?php endwhile; ?>
     </div>
   </div>
 </section>
+
 
 <?php include 'includes/footer.php'; ?>
 </body>

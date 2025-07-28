@@ -76,7 +76,7 @@ include 'includes/header.php'
           <p class="text-secondary">
             The organization is committed to transforming the lives of young people and empowering them to reach their full potential.
           </p>
-          <a href="#" class="btn btn-outline-danger mt-3 fw-bold">Meet The Founder</a>
+          <a href="meetfounder.php" class="btn btn-outline-danger mt-3 fw-bold">Meet The Founder</a>
         </div>
       </div>
     </div>

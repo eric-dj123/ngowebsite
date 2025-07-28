@@ -60,66 +60,37 @@
   </div>
 </div>
 
-					<div class="col-md-3">
+			<div class="col-md-3">
   <div class="footer_b1r">
     <h4 class="text-white mb-4">Recent News</h4>
 
-    <!-- News Item 1 -->
+    <?php
+      include "db.php";
+      $result = $conn->query("SELECT * FROM posts ORDER BY created_at DESC LIMIT 2");
+      while ($row = $result->fetch_assoc()):
+        $title = htmlspecialchars($row['title']);
+        $image = htmlspecialchars($row['image']);
+        $date = date("M d, Y", strtotime($row['created_at']));
+    ?>
     <div class="footer_b1ri row align-items-start mb-3">
       <div class="col-4">
         <a href="#">
-          <img src="img/1.jpg" class="img-fluid rounded shadow-sm" alt="News Image 1">
+          <img src="admin/uploads/<?php echo $image; ?>" class="img-fluid rounded shadow-sm" alt="News Image">
         </a>
       </div>
       <div class="col-8 ps-0">
         <h6 class="mb-1">
           <a class="text-white fw-semibold font_14 text-decoration-none" href="#">
-            Gurd Rwanda Launches Youth Empowerment Drive
+            <?php echo $title; ?>
           </a>
         </h6>
         <small class="text-light font_13">
-          <i class="fa fa-calendar col_red me-1"></i> Sep 15, 2024
+          <i class="fa fa-calendar col_red me-1"></i> <?php echo $date; ?>
         </small>
       </div>
     </div>
-
-    <!-- News Item 2 -->
-    <div class="footer_b1ri row align-items-start mb-3">
-      <div class="col-4">
-        <a href="#">
-          <img src="img/2.jpg" class="img-fluid rounded shadow-sm" alt="News Image 2">
-        </a>
-      </div>
-      <div class="col-8 ps-0">
-        <h6 class="mb-1">
-          <a class="text-white fw-semibold font_14 text-decoration-none" href="#">
-            Clean Water Project Completed in Nyamasheke
-          </a>
-        </h6>
-        <small class="text-light font_13">
-          <i class="fa fa-calendar col_red me-1"></i> Sep 10, 2024
-        </small>
-      </div>
-    </div>
-
-    <!-- News Item 3 -->
-    <div class="footer_b1ri row align-items-start">
-      <div class="col-4">
-        <a href="#">
-          <img src="img/4.jpg" class="img-fluid rounded shadow-sm" alt="News Image 3">
-        </a>
-      </div>
-      <div class="col-8 ps-0">
-        <h6 class="mb-1">
-          <a class="text-white fw-semibold font_14 text-decoration-none" href="#">
-            Gurd Hosts Annual Leadership Conference
-          </a>
-        </h6>
-        <small class="text-light font_13">
-          <i class="fa fa-calendar col_red me-1"></i> Aug 30, 2024
-        </small>
-      </div>
-    </div>
+    <?php endwhile; ?>
+    
   </div>
 </div>
 
